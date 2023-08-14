@@ -46,16 +46,16 @@ except:
 OUTPATH_SAMPLES = os.path.join(extensions_dir, extension_name, 'assets', 'preview')
 OUTPATH_GRIDS =  os.path.join(extensions_dir, extension_name, 'assets', 'grid')
 
-BATCH_SIZE = 2
-N_ITER = 2
-STEPS = 30
-CFG_SCALE = 11.5
+BATCH_SIZE = 1
+N_ITER = 1
+STEPS = 40
+CFG_SCALE = 8.0
 WIDTH = 512
-HEIGHT = 768
-SAMPLER_INDEX = 1
+HEIGHT = 512
+SAMPLER_INDEX = 0
 RESTORE_FACE = 'true'
 TILING = 'false'
-DO_NOT_SAVE_GRID = 'false'
+DO_NOT_SAVE_GRID = 'true'
 
 EXCLUDED_TAGS = ['']
 global SKIP_EXISTS
