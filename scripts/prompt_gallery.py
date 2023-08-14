@@ -73,7 +73,7 @@ def on_ui_tabs():
     port = str(shared.cmd_opts.port) if shared.cmd_opts.port is not None else "7860"
     
     html = """<script>var ip = window.location.hostname; </script>
-    <iframe id="tab_iframe" allow="clipboard-read; clipboard-write" style="width: 100%; min-height: 1080px; padding: 0;margin: 0;border: none;" src="http://{pg_ip:s}:{pg_port:s}/?theme={theme:s}&port={port:s}&ip={remote_webui:s}" frameborder="0" marginwidth="0" marginheight="0"></iframe>""".format(pg_ip=pg_ip, pg_port=str(pg_port), remote_webui=remote_webui, theme=extension_theme, port=port)
+    <iframe id="tab_iframe" allow="clipboard-read; clipboard-write" style="width: 100%; min-height: 800px; padding: 0;margin: 0;border: none;" src="http://{pg_ip:s}:{pg_port:s}/?theme={theme:s}&port={port:s}&ip={remote_webui:s}" frameborder="0" marginwidth="0" marginheight="0"></iframe>""".format(pg_ip=pg_ip, pg_port=str(pg_port), remote_webui=remote_webui, theme=extension_theme, port=port)
     with gr.Blocks(analytics_enabled=False, elem_id="prompt_gallery") as prompt_gallery:
         prompt_gallery = gr.HTML(html)
     
